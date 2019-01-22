@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>p1x3l-4rt</title>
+    <link rel="stylesheet" href="./static/style.css" />
+  </head>
+
+  <body onload="buildAll();">
+    <div id="header"><span> pixx-O pixel art creator </span></div>
+    <div id="site">
+      <div id="content">
+        <div id="canvas"></div>
+        <div id="paint-things">
+          <div id="current-color">
+            <span> current colors </span>
+            <div id="curCol1"></div>
+            <div id="curCol2"></div>
+          </div>
+          <div id="palette"></div>
+        </div>
+      </div>
+    </div>
+    <div id="tools">
+      <div id="tools-header"></div>
+      <button class="tool" id="clear" onclick="buildCanvas()">
+        <span>Clear</span>
+      </button>
+      <button class="tool" id="filler_tool" onclick="switchFillerTool()">
+        <span>filler</span>
+      </button>
+      <button class="tool" onclick="buildCanvas()">
+        <span>*PENCIL*</span>
+      </button>
+      <button class="tool" onclick="buildCanvas()"><span>tool3</span></button>
+      <button class="tool" onclick="buildCanvas()"><span>tool4</span></button>
+      <button class="tool" id="replace-color" onclick="buildCanvas()">
+        <span>replace_color</span>
+      </button>
+    </div>
+
+    <script src="behavior.js"></script>
+    <script src="painting.js"></script>
+    <script src="filler_tool.js"></script>
+    <script src="pencil_tool.js"></script>
+  </body>
+</html>
