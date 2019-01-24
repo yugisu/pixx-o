@@ -1,4 +1,11 @@
+@import '../../utilities/variables';
+
 .canvas {
-  grid-area: canvas;
+  --width-in-tiles: 80;
+  --height-in-tiles: 50;
   background: cyan;
+
+  display: grid;
+  grid-template-columns: repeat(var(--width-in-tiles), 1fr);
+  grid-template-rows: repeat(var(--height-in-tiles), 1fr);
 }
