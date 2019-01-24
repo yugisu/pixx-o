@@ -1,0 +1,38 @@
+@import '../../utilities/variables';
+
+.app {
+  height: 40em;
+  width: 55em;
+
+  display: grid;
+  grid-template-columns: auto 2em;
+  grid-template-rows: 3.5em auto;
+  grid-template-areas:
+    'app-header .......'
+    'app-body   toolbar';
+
+  border-radius: 0.8em;
+
+  @media screen and (max-width: $screen-break) {
+    height: 95%;
+    width: 95%;
+    grid-template-columns: auto;
+    grid-template-rows: 3.5em 2em auto;
+    grid-template-areas:
+      'app-header'
+      'toolbar'
+      'app-body';
+  }
+
+  &__header {
+    grid-area: app-header;
+  }
+
+  &__body {
+    grid-area: app-body;
+  }
+
+  .toolbar {
+    grid-area: toolbar;
+  }
+}

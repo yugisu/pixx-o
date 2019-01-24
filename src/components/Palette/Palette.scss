@@ -1,0 +1,11 @@
+@import '../../utilities/variables';
+
+.palette {
+  background: lightsalmon;
+
+  border-radius: 0 0 $border-radius $border-radius;
+
+  @media screen and (max-width: $screen-break) {
+    border-radius: 0;
+  }
+}

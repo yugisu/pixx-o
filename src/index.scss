@@ -1,0 +1,39 @@
+@import 'utilities/_variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  user-select: none;
+  font-family: 'Courier New', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #b4b2b7 url(bg.png) repeat;
+  background-size: 15em;
+}
+
+::selection {
+  background-color: #ffd800;
+}
+
+input {
+  outline: none;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

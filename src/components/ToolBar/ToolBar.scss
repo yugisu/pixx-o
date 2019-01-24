@@ -1,0 +1,12 @@
+@import '../../utilities/variables';
+
+.toolbar {
+  background: pink;
+  border-radius: 0 $border-radius $border-radius 0;
+  margin: 2em 0;
+
+  @media screen and (max-width: $screen-break) {
+    margin: 0;
+    border-radius: 0;
+  }
+}
