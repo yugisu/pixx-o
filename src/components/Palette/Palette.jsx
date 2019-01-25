@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import './Palette.scss';
-import ColorSwatch from './ColorSwatch';
-import ColorBoard from './ColorBoard';
 
-class Palette extends Component {
-  render() {
-    return (
-      <div className="palette">
-        <ColorSwatch />
-        <ColorBoard />
-      </div>
-    );
-  }
-}
+import ColorSwatch from './ColorSwatch';
+import PaintBoard from './PaintBoard';
+
+import './Palette.scss';
+
+const Palette = ({ currentColors, handleColorChange }) => {
+  return (
+    <div className="palette">
+      <ColorSwatch
+        colors={currentColors}
+        handleColorChange={handleColorChange}
+      />
+      <PaintBoard handleColorChange={handleColorChange} />
+    </div>
+  );
+};
 
 export default Palette;

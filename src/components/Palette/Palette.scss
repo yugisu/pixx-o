@@ -2,7 +2,7 @@
 
 .palette {
   background: lightsalmon;
-  min-height: 3em;
+  min-height: 2.5em;
 
   border-radius: 0 0 $border-radius $border-radius;
 
@@ -10,11 +10,14 @@
     border-radius: 0;
   }
 
-  margin: 0 10em 0;
+  width: 40em;
+  justify-self: start;
+  align-self: center;
+
   display: grid;
   grid-template-columns: 6em 0.3em auto;
   grid-template-rows: 100%;
-  grid-template-areas: 'color-swatch ... colorboard';
+  grid-template-areas: 'color-swatch ... paintboard';
 
   @media screen and (max-width: $screen-break) {
     margin: 0;
@@ -24,7 +27,7 @@
     grid-area: color-swatch;
   }
 
-  &__colorboard {
-    grid-area: colorboard;
+  &__paintboard {
+    grid-area: paintboard;
   }
 }

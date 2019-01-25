@@ -1,0 +1,11 @@
+@import '../../../utilities/variables';
+
+.palette__paintboard {
+  @include paletteFirstLayer();
+
+  padding: 0.25em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
