@@ -6,7 +6,7 @@
   padding: 0.5em;
 
   display: grid;
-  grid-template-rows: auto minmax(2em, 4em);
+  grid-template-rows: auto 4em;
   grid-template-columns: auto;
   grid-template-areas:
     'canvas'
