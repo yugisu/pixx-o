@@ -1,3 +1,28 @@
+@import '../../../utilities/variables';
+
 .palette__color-swatch {
-  background: teal;
+  background: #fff;
+
+  display: grid;
+  grid-template-rows: 50% 50%;
+
+  padding: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  @include paletteFirstLayer();
+
+  &__color {
+    z-index: 20;
+    position: relative;
+    @include stitched();
+    padding: 0 0.3em;
+    @include aberredText(0.5px);
+  }
+
+  &__color--primary {
+  }
+
+  &__color--secondary {
+    border-radius: 0 0 0.4em 0.4em;
+  }
 }

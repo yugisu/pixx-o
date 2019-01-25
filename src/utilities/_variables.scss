@@ -1,3 +1,24 @@
 $screen-break: 60em;
 $screen-break-small: 30em;
 $border-radius: 0.8em;
+
+@mixin aberredText($sizeOfShadow) {
+  text-shadow: $sizeOfShadow $sizeOfShadow 0 #00f1e5,
+    0 - $sizeOfShadow 0 - $sizeOfShadow 0 #ff00ae;
+}
+
+@mixin paletteFirstLayer() {
+  border-radius: 0 0 7px 7px;
+  border: 1px dashed #656565;
+  border-top: none;
+  background: #fff;
+  box-shadow: 0 1px 1px gray;
+}
+
+@mixin lowLayerShadow($amountOfShadow) {
+  box-shadow: 0 0 $amountOfShadow #b388a1;
+}
+
+@mixin stitched() {
+  border: 1px dashed #656565;
+}

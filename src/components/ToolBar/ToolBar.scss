@@ -1,9 +1,13 @@
 @import '../../utilities/variables';
 
 .toolbar {
-  background: pink;
-  border-radius: 0 $border-radius $border-radius 0;
+  position: relative;
+  z-index: 0;
   margin: 2em 0;
+
+  background: #bfbfc0;
+  box-shadow: 1px 0 2px -1px #b388a1;
+  border-radius: 0 $border-radius $border-radius 0;
 
   @media screen and (max-width: $screen-break) {
     margin: 0;

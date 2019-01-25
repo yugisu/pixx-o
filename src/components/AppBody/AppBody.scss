@@ -1,28 +1,18 @@
 @import '../../utilities/variables';
 
 .app__body {
-  background: #f1f1f2;
+  position: relative;
+  z-index: 100;
 
   padding: 0.5em;
 
-  display: grid;
-  grid-template-rows: auto 4em;
-  grid-template-columns: auto;
-  grid-template-areas:
-    'canvas'
-    'palette';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #f1f1f2;
+  border: 1px solid #bfbfbf;
+  box-shadow: 0 0 2px #b388a1, 1px 0 2px -1px #5d5d5d;
 
   border-radius: 0 0 $border-radius $border-radius;
-
-  // @media screen and (max-width: $screen-break) {
-  //   border-radius: 0;
-  // }
-
-  .canvas {
-    grid-area: canvas;
-  }
-
-  .palette {
-    grid-area: palette;
-  }
 }

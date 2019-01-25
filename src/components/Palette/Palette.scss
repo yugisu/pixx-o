@@ -2,6 +2,7 @@
 
 .palette {
   background: lightsalmon;
+  min-height: 3em;
 
   border-radius: 0 0 $border-radius $border-radius;
 
@@ -12,7 +13,7 @@
   margin: 0 10em 0;
   display: grid;
   grid-template-columns: 6em 0.3em auto;
-  grid-template-rows: auto;
+  grid-template-rows: 100%;
   grid-template-areas: 'color-swatch ... colorboard';
 
   @media screen and (max-width: $screen-break) {

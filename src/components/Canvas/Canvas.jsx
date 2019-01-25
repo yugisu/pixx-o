@@ -4,7 +4,7 @@ import './Canvas.scss';
 
 class Canvas extends Component {
   render() {
-    return <div className="canvas"> Canvas </div>;
+    return <div className="canvas" />;
   }
 }
 

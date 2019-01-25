@@ -1,9 +1,16 @@
 @import '../../utilities/variables';
 
 .canvas {
+  --tile-size: 20px;
   --width-in-tiles: 40;
   --height-in-tiles: 20;
   background: cyan;
+
+  justify-self: center;
+  align-self: center;
+
+  height: calc(var(--tile-size) * var(--height-in-tiles));
+  width: calc(var(--tile-size) * var(--width-in-tiles));
 
   display: grid;
   grid-template-columns: repeat(var(--width-in-tiles), 1fr);

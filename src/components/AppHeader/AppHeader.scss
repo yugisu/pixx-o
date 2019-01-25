@@ -9,10 +9,10 @@
   padding: 0.5em 1em;
   background: #656565;
   border-radius: 0.8rem 0.8rem 0 0;
-  box-shadow: 0 1px 2px -1px #606060;
+  box-shadow: 0 0 2px #b388a1, 1px 0 2px -1px #5d5d5d;
   font-size: 1.2em;
   color: white;
-  text-shadow: 1px 1px 0 #00f1e5, -1px -1px 0 #ff00ae;
+  @include aberredText(1px);
 
   &__splash {
     background-color: #ffd800;
