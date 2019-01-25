@@ -11,7 +11,7 @@ class ColorSwatch extends Component {
   shouldComponentUpdate(nextProps) {
     const { primary, secondary } = this.props;
 
-    return primary !== nextProps.primary, secondary !== nextProps.secondary;
+    return primary !== nextProps.primary || secondary !== nextProps.secondary;
   }
 
   render() {
