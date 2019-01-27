@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ColorSwatch from './ColorSwatch';
-import PaintBoard from './PaintBoard';
+import ColorSwatch from './components/ColorSwatch';
+import PaintBoard from './components/PaintBoard';
 
 import './Palette.scss';
 

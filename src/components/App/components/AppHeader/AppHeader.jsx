@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './AppHeader.scss';
 
 const AppHeader = ({ children }) => {
