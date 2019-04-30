@@ -13,7 +13,7 @@ const months = [
   'December',
 ];
 
-class NiceDate {
+export class NiceDate {
   constructor(givendateObj = Date(), daysToAdd = 0) {
     this.dateObj = new Date(givendateObj);
     this.dateObj.setDate(this.dateObj.getDate() + daysToAdd);
@@ -54,5 +54,3 @@ class NiceDate {
     return res;
   }
 }
-
-export default NiceDate;

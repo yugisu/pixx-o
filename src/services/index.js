@@ -1,3 +1,3 @@
-import paintingService from './paintingService.ts';
+import paintingService from './paintingService.js';
 
 export { paintingService };

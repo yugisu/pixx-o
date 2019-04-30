@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { paintingService } from '../../services';
 
 import Tile from './components/Tile';
 
@@ -18,8 +19,17 @@ class Canvas extends Component {
     const {
       canvasSettings: { height, width, tileSize },
       tiles,
+      currentColors,
       handleDraw,
+      handleUpdateTiles,
     } = this.props;
+
+    const [tileHook, canvasEvents] = paintingService(
+      'canvas__tile',
+      currentColors,
+      handleUpdateTiles,
+      tiles
+    );
 
     const canvasStyleSettings = {
       '--tile-size': tileSize,
@@ -33,16 +43,16 @@ class Canvas extends Component {
       row.map((color, elIdx) => (
         <Tile
           key={`tile-${rowIdx}-${elIdx}`}
+          tileHook={tileHook}
           color={color}
           idxH={rowIdx}
           idxW={elIdx}
-          handleDraw={handleDraw}
         />
       ))
     );
 
     return (
-      <div className="canvas" style={canvasStyleSettings}>
+      <div className="canvas" style={canvasStyleSettings} {...canvasEvents}>
         {tileArray}
       </div>
     );

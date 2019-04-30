@@ -22,30 +22,28 @@ class App extends Component {
       width: 40,
       tileSize: 20,
     },
-    canvasTiles: Array(20).fill(Array(40).fill(null)),
+    canvasTiles: Array(20).fill(Array(40).fill('#fff')),
   };
 
-  handleDraw = (idxH, idxW, mouseButton) => {
-    const {
-      currentColors: { primary, secondary },
-    } = this.state;
+  componentDidMount() {
+    document.getElementById('root').oncontextmenu = () => false;
+  }
+
+  handleUpdateTiles = (tiles) => {
+    console.log(tiles);
+    this.setState({ canvasTiles: tiles });
+  };
+
+  handleDraw = (idxH, idxW, color) => {
+    console.log('got: ', idxH, idxW, color);
 
     this.setState(({ canvasTiles }) => ({
       canvasTiles: AH.replaceElement(
         canvasTiles,
         idxH,
-        AH.replaceElement(
-          canvasTiles[idxH],
-          idxW,
-          !mouseButton ? primary : secondary
-        )
+        AH.replaceElement(canvasTiles[idxH], idxW, color)
       ),
     }));
-  };
-
-  preventContextMenu = (e) => {
-    e.preventDefault();
-    return false;
   };
 
   handleColorChange = (colorChange) => {
@@ -61,13 +59,15 @@ class App extends Component {
     const { currentColors, canvasSettings, canvasTiles } = this.state;
 
     return (
-      <div className="app" onContextMenu={this.preventContextMenu}>
+      <div className="app">
         <AppHeader>pixx-O pixel art creator</AppHeader>
         <AppBody>
           <Canvas
             canvasSettings={canvasSettings}
             tiles={canvasTiles}
+            currentColors={currentColors}
             handleDraw={this.handleDraw}
+            handleUpdateTiles={this.handleUpdateTiles}
           />
           <Palette
             currentColors={currentColors}
