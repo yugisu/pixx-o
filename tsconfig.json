@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "target": "esnext",
-    "lib": ["dom", "dom.iterable"],
+    "lib": [
+      "dom",
+      "dom.iterable"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,5 +18,7 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

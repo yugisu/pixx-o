@@ -1,6 +1,9 @@
 type ChangeColorAction = {
   type: 'CHANGE_COLOR';
-  payload: { [key in 'primary' | 'secondary']: string };
+  payload:
+    | { [key in 'primary' | 'secondary']: string }
+    | { primary: string }
+    | { secondary: string };
 };
 
 type AddColorAction = {
@@ -9,7 +12,10 @@ type AddColorAction = {
 };
 
 export const changeColor = (
-  change: { [key in 'primary' | 'secondary']: string }
+  change:
+    | { [key in 'primary' | 'secondary']: string }
+    | { primary: string }
+    | { secondary: string }
 ): ChangeColorAction => ({
   type: 'CHANGE_COLOR',
   payload: change,
